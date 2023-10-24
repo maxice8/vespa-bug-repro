@@ -3,6 +3,7 @@
     <!-- container START -->
     <container id="Vespa_container" version="1.0">
         <document-api />
+        <search/>
         <nodes>
             <node hostalias="vespa-0" />
         </nodes>
