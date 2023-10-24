@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services version="1.0">
+    <!-- container START -->
+    <container id="Vespa_container" version="1.0">
+        <document-api />
+        <nodes>
+            <node hostalias="vespa-0" />
+        </nodes>
+    </container>
+    <!-- container END -->
+
+    <!-- content START -->
+    <content id="Vespa_content" version="1.0">
+        <documents>
+            <document type="diary_page" mode="index" />
+        </documents>
+        <config name="vespa.config.search.summary.juniperrc">
+            <max_matches>2</max_matches>
+            <length>1250</length>
+            <surround_max>500</surround_max>
+            <min_length>300</min_length>
+        </config>
+        <redundancy>1</redundancy>
+        <nodes>
+            <node distribution-key="0" hostalias="vespa-0" />
+        </nodes>
+    </content>
+
+    <!-- admin START -->
+    <admin version="2.0">
+        <configservers>
+            <configserver hostalias="vespa-0" />
+        </configservers>
+        <cluster-controllers>
+            <cluster-controller hostalias="vespa-0" />
+        </cluster-controllers>
+        <adminserver hostalias="vespa-0" />
+        <logserver hostalias="vespa-0" />
+    </admin>
+    <!-- admin DONE -->
+</services>

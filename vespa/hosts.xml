@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hosts>
+  <!-- hosts vespa-X são configservers -->
+  <host name="localhost">
+    <alias>vespa-0</alias>
+  </host>
+</hosts>

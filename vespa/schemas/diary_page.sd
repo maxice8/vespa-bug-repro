@@ -1,0 +1,25 @@
+schema diary_page {
+    stemming: none
+    document diary_page inherits base_definition {
+        field id type long {
+            indexing: summary
+        }
+        field content type string {
+            indexing: index | summary
+            index: enable-bm25
+            summary: dynamic
+            stemming: none
+        }
+    }
+    fieldset default {
+        fields: content
+    }
+    rank-profile default inherits default {
+        first-phase {
+            expression {
+                bm25(content)
+            }
+        }
+        rank-type content: about
+    }
+}

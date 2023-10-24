@@ -1,0 +1,27 @@
+schema base_definition {
+    document base_definition {
+        field language type string {
+            indexing: "pt-BR" | set_language
+        }
+        field filtrado type bool {
+            indexing: summary | attribute
+            attribute {
+                fast-search
+            }
+            rank: filter
+        }
+        field updated_at type string {
+            indexing: summary
+        }
+        field timestamp type long {
+            indexing: summary
+        }
+        field origin_database type string {
+            indexing: summary | attribute
+            attribute {
+                fast-search
+            }
+            rank: filter
+        }
+    }
+}

@@ -1,0 +1,6 @@
+<query-profile id="default" type="root">
+    <field name="model.locale">pt-BR</field>
+    <field name="model.language">pt-BR</field>
+    <field name="maxHits">50</field>
+    <field name="maxOffset">1000</field>
+</query-profile>
