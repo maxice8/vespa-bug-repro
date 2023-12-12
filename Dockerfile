@@ -6,7 +6,7 @@ RUN mkdir /vespa-bug-repro
 # Copy your files into the image
 COPY vespa /vespa-bug-repro/vespa
 COPY data.json /vespa-bug-repro/data.json
-COPY --chmod=750 entrypoint.sh /vespa-bug-repro/entrypoint.sh
+COPY entrypoint.sh /vespa-bug-repro/entrypoint.sh
 
 FROM vespaengine/vespa as runner
 

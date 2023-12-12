@@ -10,7 +10,7 @@
 
 The following command:
 
-`curl --data-urlencode 'yql=select * from diary_page where default contains phrase("JOAO", "PAULO", "MARTINS", "DE", "SOUZA", "BARBOZA")' localhost:8080/search`
+`curl --data-urlencode 'yql=select * from diary_page where default contains phrase("JOAO", "PAULO", "MARTINS", "DE", "SOUZA", "BARBOZA")' localhost:8080/search/`
 
 Should highlight:
 
