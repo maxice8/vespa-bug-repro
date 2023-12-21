@@ -22,4 +22,12 @@ schema diary_page {
         }
         rank-type content: about
     }
+    document-summary debug-content {
+        summary content { }
+        summary content_tokens {
+            source: content
+            tokens
+        }
+        from-disk
+    }
 }
