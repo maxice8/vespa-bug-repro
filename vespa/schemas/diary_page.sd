@@ -9,6 +9,11 @@ schema diary_page {
             index: enable-bm25
             summary: dynamic
             stemming: none
+            match {
+                # Default is 100, see:
+                # https://github.com/vespa-engine/vespa/issues/29645
+                max-occurrences: 500
+            }
         }
     }
     fieldset default {
